@@ -1,0 +1,379 @@
+body {
+    background-color: #fffefe;
+    margin: 0;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-areas: 'aside main';
+    grid-template-rows: 1fr;
+    grid-template-columns: 250px 1fr;
+}
+
+.invisible {
+    background-color: #ececec;
+    display: none;
+    height: 100vh;
+    padding: 20px;
+    top: 20px;
+}
+
+.content-aside {
+ margin: 65px 0;
+ font-size: 14px;
+ font-weight: 300;
+}
+
+.content-aside > h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.container-aside {
+    margin-top: 30px;
+    padding: 20px 10px;
+}
+
+
+#show-aside {
+    margin: 20px;
+}
+
+#show-aside, #close-aside {
+    background-color: transparent;
+    transition: background-color 1s ease-out;
+    cursor: pointer;
+    border: none;
+}
+
+#show-aside:hover,
+#close-aside:hover {
+    background-color: #fcfafa;
+}
+
+.btn-aside {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    left: 0;
+    padding-left: 20px;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fffefe;
+    box-sizing: border-box;
+}
+
+.width-main {
+    width: calc(100vw - 400px);
+    box-sizing: border-box;
+    background-color: #fffefe;
+}
+
+.container {
+    background-color: #fffefe;
+    max-width: 500px;
+    width: 100%;
+    padding: 5px 40px;
+    box-sizing: border-box;
+    margin: 30px auto;
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px 2px #fcfafa;
+    display: flex;
+    justify-content: space-between;
+}
+
+h3 {
+    padding: 0;
+    margin: 0;
+    margin-right: 25px;
+}
+
+
+.list {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #fffefe;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 2px 3px 3px 3px #ddd;
+    position: absolute;
+    top: 20%;
+}
+
+.new-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 460px;
+    padding: 0;
+    margin-top: 20px;
+}
+
+p, h4 {
+   margin: 0;
+}
+
+h4 {
+    border-bottom: solid 2px green;
+    width: fit-content;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+p{
+    line-height: 1.4rem;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    align-items: center;
+    margin-right: 30px;
+}
+
+li {
+    margin-right: 10px;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: justify;
+    list-style: none;
+}
+
+#notes {
+    margin-top: 10px;
+    border: none ;
+    outline: none;
+    background-color: #fcfafa;
+    width: 240px;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.show-note {
+    display: block;
+    font-size: 14px;
+}
+
+.cont-btn {
+    max-width: 800px;
+    left: 20vw;
+    margin: auto;
+}
+
+#show-button {
+    border: none;
+    background-color: transparent;
+    color: #c40909;
+    transition: color 500ms ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 30px;
+    font-weight: 700;
+    transform: translateX(-50%);
+    left: 50%;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 10px;
+    transition: background-color 1s ease-out;
+}
+
+label {
+    margin: 10px;
+    display: block;
+}
+
+.button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    border: solid .8px #ececec;
+}
+
+#close {
+    align-self: flex-end;
+}
+
+.min-container {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.content {
+    background-color: #ececec;
+    border-radius: 10px;
+    padding: 10px;
+    resize: vertical;
+    overflow: auto;
+}
+.btn {
+    padding: 10px 25px;
+    border: none;
+    background-color: #e76011;
+    margin-left: 35px;
+    color: #fcfafa;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 2px 2px 2px #b88263;
+    cursor: pointer;
+}
+
+#show-label {
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+#show-button:hover {
+    color: #ff0000;
+}
+
+.inputs, select {
+    display: block;
+}
+
+#priority,
+#dueDate {
+    border: solid .6px #fcfafa;
+    box-shadow: 1px 1px 1px #ececec;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #fcfafa;
+    outline: solid .4px #ececec;
+    padding: 3px;
+    transition: background-color 1s ease-out;
+    margin-right: 10px;
+    margin-top: 25px;
+}
+
+#priority:hover {
+    background-color: #fffefe;
+}
+
+.inputs {
+    padding: 10px;
+    width: max(400px, 100px);
+    margin: 5px 0;
+    border: none;
+    outline: none;
+    background-color: #fcfafa;
+    border-radius: 5px;
+}
+
+.mybtns {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 25px;
+}
+
+.dialog {
+    display: none;
+    background-color: #fff;
+    border: .5px solid #fcfafa;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 200px;
+    position: fixed;
+    padding: 20px;
+    min-width: 100px;
+    z-index: 9999;
+    flex-direction: column;
+    box-shadow: 2px 3px 2px 2px #ececec;
+    border-radius: 10px;
+}
+
+#add-task {
+    font-size: 14px;
+    color: #c40909;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    margin-right: 20px;
+    padding: 10px;
+    font-weight: 700;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: background-color 1s ease-out;
+}
+
+#add-task:hover, 
+#show-button:hover {
+    background-color: #DDD;
+    width: max-content;
+}
+
+.show-label {
+    margin-right: 5px;
+}
+  
+
+.additional {
+    display: flex;
+    align-items: center;
+}
+
+.hesNotes {
+    display: none;
+    flex-direction: column;
+    background-color: #fffefe;
+    padding: 10px;
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px #ececec;
+    max-width: 250px;
+}
+
+.content-notes {
+    display: block;
+}
+
+.status-element {
+    text-align: center;
+    margin-top: 25px;
+
+}
+
+.flex-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.finish, .pro, .no-now{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+
+.done {
+    color: #0d8a0d;
+    padding: 5px;
+    background-color: #ececec;
+}
+
+.progress {
+    color: #e7e711;
+    padding: 5px;
+    background-color: #ececec;
+}
+
+.no {
+    color: #c40909;
+    padding: 5px;
+    background-color: #ececec;
+}

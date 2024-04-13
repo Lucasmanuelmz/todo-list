@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+  </head>
+  <body>
+    <aside class="invisible">
+      <div class="btn-aside">
+        <button type="button" id="add-task">
+          <span class="show-label"></span>Adicionar tarefa
+        </button>
+        <button id="close-aside"></button>
+      </div>
+      <div class="content-aside">
+        <h3>Olá, seja bem-vindo!</h3>
+        <p>
+          Queria te avisar que ao usar este site você encontrará um bug
+          referente à duplicação de tarefas. Quando você cria uma tarefa e clica
+          no botão 'adicionar' mais de uma vez, sua tarefa será adicionada
+          várias vezes. Visto que este site é apenas uma amostra, não tratei
+          este erro de propósito. O que eu queria implementar é a funcionalidade
+          de adicionar conteúdo no localStorage e recuperá-lo apenas.
+        </p>
+      </div>
+    </aside>
+    <main class="main">
+      <button id="show-aside"></button>
+      <div class="cont-btn">
+        <button type="button" id="show-button">
+          <span class="show-label"></span>Adicionar tarefa
+        </button>
+      </div>
+      <div id="dialog" class="dialog">
+        <button id="close" class="button"></button>
+        <form method="dialog" action="/">
+          <input
+            class="inputs"
+            placeholder="Escreva o título da tarefa"
+            type="text"
+            name="title"
+            id="title"
+          />
+          <textarea
+            class="inputs"
+            placeholder="Descrição"
+            name="description"
+            id="description"
+          ></textarea>
+          <div class="additional">
+            <select name="priority" id="priority">
+              <option>Prioridade</option>
+              <option value="Prioridade 1">
+                Prioridade 1<span class="icon"></span>
+              </option>
+              <option value="Prioridade 2">
+                Prioridade 2<span class="icon"></span>
+              </option>
+              <option value="Prioridade 3">
+                Prioridade 3<span class="icon"></span>
+              </option>
+              <option value="Prioridade 4">
+                Prioridade 4<span class="icon"></span>
+              </option>
+              <option value="Prioridade 5">
+                Prioridade 5<span class="icon"></span>
+              </option>
+              <option value="Prioridade 6">
+                Prioridade 6<span class="icon"></span>
+              </option>
+            </select>
+            <input type="date" name="dueDate" id="dueDate" />
+            <div class="hesNotes">
+              <button class="close-note"></button>
+              <div class="content-note">
+                <textarea
+                  placeholder="Adicione algumas notas neste espaço"
+                  name="notes"
+                  id="notes"
+                ></textarea>
+                <h4>Status da tarefa</h4>
+                <label for="finished">
+                  <input type="radio" name="status" id="finished" />
+                  Atividade concluida
+                </label>
+
+                <label for="progress">
+                  <input type="radio" name="status" id="progress" />
+                  Em andamento
+                </label>
+
+                <label for="no">
+                  <input type="radio" name="status" id="no" />
+                  Não concluida
+                </label>
+              </div>
+            </div>
+            <div class="mybtns">
+              <button id="cont-notes" class="button"></button>
+              <button class="btn">Adicionar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

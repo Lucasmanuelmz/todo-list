@@ -18,7 +18,7 @@ Todo.prototype.task = function () {
     }
 }
 
-const myList = [];
+let myList = [];
 
 module.exports = {
  Todo, myList
